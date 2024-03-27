@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EmailInput" customModule="EffectiveMobile_TestTask" customModuleProvider="target">
+            <connections>
+                <outlet property="clearFieldButton" destination="LkC-dS-W7z" id="2cg-eZ-BD0"/>
+                <outlet property="emailInputField" destination="Up7-K5-o9P" id="cPk-If-Z22"/>
+                <outlet property="errorMessage" destination="KNJ-2W-J9U" id="Kea-Nn-0hs"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="347" height="71"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Up7-K5-o9P" userLabel="Email input Field">
+                    <rect key="frame" x="0.0" y="0.0" width="347" height="40"/>
+                    <color key="backgroundColor" red="0.1915304363" green="0.19614860419999999" blue="0.2058344185" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="MEV-Iq-nrq"/>
+                    </constraints>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LkC-dS-W7z" userLabel="Clear field button">
+                    <rect key="frame" x="308" y="6.6666666666666679" width="37" height="27.000000000000004"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="clearFieldButton"/>
+                    <connections>
+                        <action selector="clearInputField:" destination="-1" eventType="touchUpInside" id="3Mm-b8-1dO"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы ввели неверный email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KNJ-2W-J9U" userLabel="Error message">
+                    <rect key="frame" x="8" y="43" width="323" height="15.666666666666664"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" systemColor="systemRedColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="KNJ-2W-J9U" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="58k-gs-Imh"/>
+                <constraint firstAttribute="trailing" secondItem="KNJ-2W-J9U" secondAttribute="trailing" constant="16" id="SXU-oO-yi4"/>
+                <constraint firstItem="LkC-dS-W7z" firstAttribute="centerY" secondItem="Up7-K5-o9P" secondAttribute="centerY" id="TiS-l1-khb"/>
+                <constraint firstItem="Up7-K5-o9P" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="eKP-ZS-fE9"/>
+                <constraint firstItem="KNJ-2W-J9U" firstAttribute="top" secondItem="Up7-K5-o9P" secondAttribute="bottom" constant="3" id="jae-eb-uKi"/>
+                <constraint firstItem="Up7-K5-o9P" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="mYR-aq-bRe"/>
+                <constraint firstAttribute="trailing" secondItem="LkC-dS-W7z" secondAttribute="trailing" constant="2" id="rk9-1Y-zNg"/>
+                <constraint firstAttribute="trailing" secondItem="Up7-K5-o9P" secondAttribute="trailing" id="tKO-jo-YYC"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="89.312977099236633" y="42.605633802816904"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="clearFieldButton" width="13" height="13"/>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
