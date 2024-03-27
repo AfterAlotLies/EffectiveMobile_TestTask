@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AuthView" customModule="EffectiveMobile_TestTask" customModuleProvider="target">
+            <connections>
+                <outlet property="continueButton" destination="az4-Of-MOO" id="dym-QE-XRz"/>
+                <outlet property="emailInputField" destination="3YX-tn-Bbo" id="E1d-6i-4x0"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="LwZ-So-P4h">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вход в личный кабинет" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qfV-ie-WDg">
+                    <rect key="frame" x="8" y="67" width="377" height="23"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Ej-dg-hUJ" userLabel="Find Job View">
+                    <rect key="frame" x="8" y="138" width="377" height="186"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3YX-tn-Bbo" customClass="EmailInput" customModule="EffectiveMobile_TestTask" customModuleProvider="target">
+                            <rect key="frame" x="16" y="61" width="345" height="47"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="47" id="nDx-6O-XW0"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="az4-Of-MOO">
+                            <rect key="frame" x="16" y="128" width="212" height="38"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Продолжить"/>
+                            <connections>
+                                <action selector="continueButtonAction:" destination="-1" eventType="touchUpInside" id="WmF-IT-JX8"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Поиск работы" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fse-5K-mYW">
+                            <rect key="frame" x="16" y="24" width="345" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bnU-sc-lq6">
+                            <rect key="frame" x="236" y="128" width="125" height="38"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Войти с паролем">
+                                <fontDescription key="titleFontDescription" type="system" pointSize="0.0"/>
+                            </buttonConfiguration>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.1337474585" green="0.138584286" blue="0.14374038580000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="186" id="172-DK-hrf"/>
+                        <constraint firstAttribute="bottom" secondItem="bnU-sc-lq6" secondAttribute="bottom" constant="20" id="7Qz-5h-QpR"/>
+                        <constraint firstItem="az4-Of-MOO" firstAttribute="top" secondItem="3YX-tn-Bbo" secondAttribute="bottom" constant="20" id="7Uw-7z-xHT"/>
+                        <constraint firstItem="3YX-tn-Bbo" firstAttribute="top" secondItem="Fse-5K-mYW" secondAttribute="bottom" constant="16" id="BYG-58-08n"/>
+                        <constraint firstItem="bnU-sc-lq6" firstAttribute="leading" secondItem="az4-Of-MOO" secondAttribute="trailing" constant="8" id="FtA-1c-b8c"/>
+                        <constraint firstItem="bnU-sc-lq6" firstAttribute="top" secondItem="3YX-tn-Bbo" secondAttribute="bottom" constant="20" id="LAw-JH-MHL"/>
+                        <constraint firstItem="3YX-tn-Bbo" firstAttribute="leading" secondItem="5Ej-dg-hUJ" secondAttribute="leading" constant="16" id="MAr-l4-08Y"/>
+                        <constraint firstAttribute="trailing" secondItem="bnU-sc-lq6" secondAttribute="trailing" constant="16" id="Niw-OH-7ro"/>
+                        <constraint firstItem="az4-Of-MOO" firstAttribute="leading" secondItem="5Ej-dg-hUJ" secondAttribute="leading" constant="16" id="Q9o-hb-Soi"/>
+                        <constraint firstAttribute="trailing" secondItem="Fse-5K-mYW" secondAttribute="trailing" constant="16" id="SdF-zO-VOC"/>
+                        <constraint firstItem="Fse-5K-mYW" firstAttribute="top" secondItem="5Ej-dg-hUJ" secondAttribute="top" constant="24" id="cjC-6x-UYh"/>
+                        <constraint firstAttribute="bottom" secondItem="az4-Of-MOO" secondAttribute="bottom" constant="20" id="fGv-G0-BMM"/>
+                        <constraint firstAttribute="trailing" secondItem="3YX-tn-Bbo" secondAttribute="trailing" constant="16" id="m8b-0e-rvQ"/>
+                        <constraint firstItem="Fse-5K-mYW" firstAttribute="leading" secondItem="5Ej-dg-hUJ" secondAttribute="leading" constant="16" id="z96-38-cpP"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8FS-St-gst" userLabel="Find employee">
+                    <rect key="frame" x="8" y="360" width="377" height="146"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Поиск сотрудников" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PkN-Zl-7Jb">
+                            <rect key="frame" x="16" y="24" width="345" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Размещение вакансий и доступ к базе резюме" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3m-uX-Gbo">
+                            <rect key="frame" x="16" y="53" width="345" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="osb-pH-Hbp">
+                            <rect key="frame" x="16" y="86" width="345" height="34.333333333333343"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Я ищу сотрудников">
+                                <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                            </buttonConfiguration>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="20"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.1337474585" green="0.138584286" blue="0.14374038580000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="f3m-uX-Gbo" secondAttribute="trailing" constant="16" id="9pj-IB-71A"/>
+                        <constraint firstItem="PkN-Zl-7Jb" firstAttribute="top" secondItem="8FS-St-gst" secondAttribute="top" constant="24" id="FLS-P7-F0F"/>
+                        <constraint firstItem="f3m-uX-Gbo" firstAttribute="leading" secondItem="8FS-St-gst" secondAttribute="leading" constant="16" id="Vyw-Kt-VPR"/>
+                        <constraint firstAttribute="trailing" secondItem="PkN-Zl-7Jb" secondAttribute="trailing" constant="16" id="f67-xv-mja"/>
+                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="osb-pH-Hbp" secondAttribute="bottom" constant="16" id="iJa-Uf-m3k"/>
+                        <constraint firstItem="PkN-Zl-7Jb" firstAttribute="leading" secondItem="8FS-St-gst" secondAttribute="leading" constant="16" id="jIK-VV-1TN"/>
+                        <constraint firstItem="f3m-uX-Gbo" firstAttribute="top" secondItem="PkN-Zl-7Jb" secondAttribute="bottom" constant="8" id="lba-pA-AD4"/>
+                        <constraint firstAttribute="height" constant="146" id="pDo-2s-KRn"/>
+                        <constraint firstAttribute="trailing" secondItem="osb-pH-Hbp" secondAttribute="trailing" constant="16" id="r07-dc-zyM"/>
+                        <constraint firstItem="osb-pH-Hbp" firstAttribute="leading" secondItem="8FS-St-gst" secondAttribute="leading" constant="16" id="wgR-g2-K4m"/>
+                        <constraint firstItem="osb-pH-Hbp" firstAttribute="top" secondItem="f3m-uX-Gbo" secondAttribute="bottom" constant="16" id="xtW-tI-JoP"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="65K-TJ-8Zk"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="5Ej-dg-hUJ" firstAttribute="leading" secondItem="65K-TJ-8Zk" secondAttribute="leading" constant="8" id="4c6-XX-pKB"/>
+                <constraint firstItem="8FS-St-gst" firstAttribute="leading" secondItem="65K-TJ-8Zk" secondAttribute="leading" constant="8" id="QKe-Vt-W5L"/>
+                <constraint firstItem="8FS-St-gst" firstAttribute="top" secondItem="5Ej-dg-hUJ" secondAttribute="bottom" constant="36" id="QUA-iI-x4d"/>
+                <constraint firstItem="qfV-ie-WDg" firstAttribute="top" secondItem="65K-TJ-8Zk" secondAttribute="top" constant="8" id="d0R-pf-eZU"/>
+                <constraint firstItem="65K-TJ-8Zk" firstAttribute="trailing" secondItem="8FS-St-gst" secondAttribute="trailing" constant="8" id="dLd-JI-1sJ"/>
+                <constraint firstItem="5Ej-dg-hUJ" firstAttribute="top" secondItem="qfV-ie-WDg" secondAttribute="bottom" constant="48" id="ig5-na-TpA"/>
+                <constraint firstItem="65K-TJ-8Zk" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="8FS-St-gst" secondAttribute="bottom" constant="16" id="ipV-tt-Fy9"/>
+                <constraint firstItem="65K-TJ-8Zk" firstAttribute="trailing" secondItem="5Ej-dg-hUJ" secondAttribute="trailing" constant="8" id="qGT-8s-5OF"/>
+                <constraint firstItem="65K-TJ-8Zk" firstAttribute="trailing" secondItem="qfV-ie-WDg" secondAttribute="trailing" constant="8" id="sg4-Lm-MQM"/>
+                <constraint firstItem="qfV-ie-WDg" firstAttribute="leading" secondItem="65K-TJ-8Zk" secondAttribute="leading" constant="8" id="y57-jX-int"/>
+            </constraints>
+            <point key="canvasLocation" x="490.83969465648852" y="-289.43661971830988"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
