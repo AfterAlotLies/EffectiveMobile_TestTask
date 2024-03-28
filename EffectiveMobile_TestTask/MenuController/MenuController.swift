@@ -9,6 +9,8 @@ import UIKit
 
 class MenuController: UITabBarController {
     
+    private let authManager = AuthManager.shared
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupMenuBar()
@@ -37,15 +39,14 @@ class MenuController: UITabBarController {
         for item in 0...4 {
             items[item].image = UIImage(named: images[item])
         }
-        selectedIndex = 1
-        //        let isLoggedIn = UserDefaults.standard.bool(forKey: "isLoggedIn")
-        //
-        //        if isLoggedIn {
-        //            selectedIndex = 0
-        //        } else {
-        //            selectedIndex = 1
-        //            tabBarItem.isEnabled = false
-        //        }
+        
+        if let isLoggedIn = authManager.isLoggedIn {
+            if isLoggedIn {
+                selectedIndex = 0
+            } else {
+                selectedIndex = 1
+            }
+        }
     }
     
     private func setupTopBorder() {
