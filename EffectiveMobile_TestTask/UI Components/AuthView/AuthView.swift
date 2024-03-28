@@ -13,7 +13,7 @@ class AuthView: UIView {
     @IBOutlet private weak var continueButton: UIButton!
     
     private var inputResult: String = ""
-    private var clearActionHandler: (() -> Void)?
+    private var continueActionHandler: (() -> Void)?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -31,7 +31,7 @@ class AuthView: UIView {
     }
     
     func setActionHandler(_ actionHandler: (() -> Void)?) {
-        clearActionHandler = actionHandler
+        continueActionHandler = actionHandler
     }
     
     private func loadViewFromXib() -> UIView {
@@ -49,13 +49,12 @@ class AuthView: UIView {
         emailInputField.authViewDelegate = self
     }
     
-    
     @IBAction func continueButtonAction(_ sender: Any) {
         inputResult = emailInputField.checkCorrectlyInput()
-        if inputResult != "" {
-            print("okay")
-        } else {
+        if inputResult == "" {
             emailInputField.displayInputError()
+        } else {
+            continueActionHandler?()
         }
     }
 }
