@@ -35,6 +35,8 @@
 		11F4E1732BB4A162007C77FD /* VerificationCodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11F4E1722BB4A162007C77FD /* VerificationCodeView.xib */; };
 		11F4E17B2BB4A43C007C77FD /* VerificationCodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F4E1792BB4A43C007C77FD /* VerificationCodeCell.swift */; };
 		11F4E17C2BB4A43C007C77FD /* VerificationCodeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11F4E17A2BB4A43C007C77FD /* VerificationCodeCell.xib */; };
+		11F4E17F2BB59395007C77FD /* VerificationCodeViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F4E17E2BB59395007C77FD /* VerificationCodeViewDelegate.swift */; };
+		11F4E1832BB5BC71007C77FD /* ViewVisibilityStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F4E1822BB5BC71007C77FD /* ViewVisibilityStatus.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +70,8 @@
 		11F4E1722BB4A162007C77FD /* VerificationCodeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VerificationCodeView.xib; sourceTree = "<group>"; };
 		11F4E1792BB4A43C007C77FD /* VerificationCodeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationCodeCell.swift; sourceTree = "<group>"; };
 		11F4E17A2BB4A43C007C77FD /* VerificationCodeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VerificationCodeCell.xib; sourceTree = "<group>"; };
+		11F4E17E2BB59395007C77FD /* VerificationCodeViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationCodeViewDelegate.swift; sourceTree = "<group>"; };
+		11F4E1822BB5BC71007C77FD /* ViewVisibilityStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewVisibilityStatus.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,15 +105,9 @@
 			isa = PBXGroup;
 			children = (
 				11F4E1692BB45888007C77FD /* UI Components */,
+				11F4E17D2BB5908E007C77FD /* ViewControllers */,
 				11F4E1662BB43EA7007C77FD /* Protocols */,
 				11F4E1572BB4014D007C77FD /* AuthManager */,
-				11F4E12B2BB3E91A007C77FD /* NavigationController */,
-				11F4E1372BB3EBF9007C77FD /* MenuController */,
-				11F4E1302BB3E9A5007C77FD /* SearchViewController */,
-				11F4E13E2BB3ED66007C77FD /* FavouritesViewController */,
-				11F4E1452BB3EF82007C77FD /* ResponsesViewController */,
-				11F4E1462BB3EF9A007C77FD /* MessagesViewController */,
-				11F4E1472BB3EFA3007C77FD /* ProfileViewController */,
 				11F4E1352BB3E9C7007C77FD /* Application */,
 				11F4E1362BB3E9F7007C77FD /* Resources */,
 			);
@@ -150,6 +148,7 @@
 				11F4E11F2BB3E880007C77FD /* LaunchScreen.storyboard */,
 				11F4E1222BB3E880007C77FD /* Info.plist */,
 				11F4E11A2BB3E874007C77FD /* EffectiveMobile_TestTask.xcdatamodeld */,
+				11F4E1822BB5BC71007C77FD /* ViewVisibilityStatus.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -228,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				11F4E1672BB43EB9007C77FD /* AuthViewDelegate.swift */,
+				11F4E17E2BB59395007C77FD /* VerificationCodeViewDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -259,6 +259,20 @@
 				11F4E17A2BB4A43C007C77FD /* VerificationCodeCell.xib */,
 			);
 			path = VerificationCodeCell;
+			sourceTree = "<group>";
+		};
+		11F4E17D2BB5908E007C77FD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				11F4E12B2BB3E91A007C77FD /* NavigationController */,
+				11F4E1372BB3EBF9007C77FD /* MenuController */,
+				11F4E1302BB3E9A5007C77FD /* SearchViewController */,
+				11F4E13E2BB3ED66007C77FD /* FavouritesViewController */,
+				11F4E1452BB3EF82007C77FD /* ResponsesViewController */,
+				11F4E1462BB3EF9A007C77FD /* MessagesViewController */,
+				11F4E1472BB3EFA3007C77FD /* ProfileViewController */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,6 +371,8 @@
 				11F4E1562BB3FE17007C77FD /* AuthManager.swift in Sources */,
 				11F4E14A2BB3F2F9007C77FD /* ProfileViewController.swift in Sources */,
 				11F4E1142BB3E874007C77FD /* SceneDelegate.swift in Sources */,
+				11F4E1832BB5BC71007C77FD /* ViewVisibilityStatus.swift in Sources */,
+				11F4E17F2BB59395007C77FD /* VerificationCodeViewDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
