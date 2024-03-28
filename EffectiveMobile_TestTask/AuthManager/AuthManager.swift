@@ -11,5 +11,12 @@ class AuthManager {
     
     static let shared = AuthManager()
     
-    var isLoggedIn: Bool?
+    var isLoggedIn: Bool? {
+        UserDefaults.standard.bool(forKey: "isLoggedIn")
+    }
+    
+    func login() {
+        UserDefaults.standard.setValue(true, forKey: "isLoggedIn")
+        print("u logged in ")
+    }
 }
