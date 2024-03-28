@@ -31,6 +31,10 @@
 		11F4E1632BB4109E007C77FD /* EmailInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F4E1622BB4109E007C77FD /* EmailInput.swift */; };
 		11F4E1652BB410F4007C77FD /* EmailInput.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11F4E1642BB410F4007C77FD /* EmailInput.xib */; };
 		11F4E1682BB43EB9007C77FD /* AuthViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F4E1672BB43EB9007C77FD /* AuthViewDelegate.swift */; };
+		11F4E1712BB4A0E7007C77FD /* VerificationCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F4E1702BB4A0E7007C77FD /* VerificationCodeView.swift */; };
+		11F4E1732BB4A162007C77FD /* VerificationCodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11F4E1722BB4A162007C77FD /* VerificationCodeView.xib */; };
+		11F4E17B2BB4A43C007C77FD /* VerificationCodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F4E1792BB4A43C007C77FD /* VerificationCodeCell.swift */; };
+		11F4E17C2BB4A43C007C77FD /* VerificationCodeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11F4E17A2BB4A43C007C77FD /* VerificationCodeCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +64,10 @@
 		11F4E1622BB4109E007C77FD /* EmailInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailInput.swift; sourceTree = "<group>"; };
 		11F4E1642BB410F4007C77FD /* EmailInput.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmailInput.xib; sourceTree = "<group>"; };
 		11F4E1672BB43EB9007C77FD /* AuthViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewDelegate.swift; sourceTree = "<group>"; };
+		11F4E1702BB4A0E7007C77FD /* VerificationCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationCodeView.swift; sourceTree = "<group>"; };
+		11F4E1722BB4A162007C77FD /* VerificationCodeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VerificationCodeView.xib; sourceTree = "<group>"; };
+		11F4E1792BB4A43C007C77FD /* VerificationCodeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationCodeCell.swift; sourceTree = "<group>"; };
+		11F4E17A2BB4A43C007C77FD /* VerificationCodeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VerificationCodeCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +105,11 @@
 				11F4E1572BB4014D007C77FD /* AuthManager */,
 				11F4E12B2BB3E91A007C77FD /* NavigationController */,
 				11F4E1372BB3EBF9007C77FD /* MenuController */,
-				11F4E1472BB3EFA3007C77FD /* ProfileViewController */,
-				11F4E1462BB3EF9A007C77FD /* MessagesViewController */,
-				11F4E1452BB3EF82007C77FD /* ResponsesViewController */,
 				11F4E1302BB3E9A5007C77FD /* SearchViewController */,
-				11F4E1582BB4016D007C77FD /* AuthView */,
 				11F4E13E2BB3ED66007C77FD /* FavouritesViewController */,
+				11F4E1452BB3EF82007C77FD /* ResponsesViewController */,
+				11F4E1462BB3EF9A007C77FD /* MessagesViewController */,
+				11F4E1472BB3EFA3007C77FD /* ProfileViewController */,
 				11F4E1352BB3E9C7007C77FD /* Application */,
 				11F4E1362BB3E9F7007C77FD /* Resources */,
 			);
@@ -228,9 +235,30 @@
 		11F4E1692BB45888007C77FD /* UI Components */ = {
 			isa = PBXGroup;
 			children = (
+				11F4E1742BB4A3D6007C77FD /* VerificationCodeCell */,
+				11F4E16F2BB4A0AC007C77FD /* VerificationCodeView */,
+				11F4E1582BB4016D007C77FD /* AuthView */,
 				11F4E1612BB4107E007C77FD /* EmailInput */,
 			);
 			path = "UI Components";
+			sourceTree = "<group>";
+		};
+		11F4E16F2BB4A0AC007C77FD /* VerificationCodeView */ = {
+			isa = PBXGroup;
+			children = (
+				11F4E1702BB4A0E7007C77FD /* VerificationCodeView.swift */,
+				11F4E1722BB4A162007C77FD /* VerificationCodeView.xib */,
+			);
+			path = VerificationCodeView;
+			sourceTree = "<group>";
+		};
+		11F4E1742BB4A3D6007C77FD /* VerificationCodeCell */ = {
+			isa = PBXGroup;
+			children = (
+				11F4E1792BB4A43C007C77FD /* VerificationCodeCell.swift */,
+				11F4E17A2BB4A43C007C77FD /* VerificationCodeCell.xib */,
+			);
+			path = VerificationCodeCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,6 +322,7 @@
 				11F4E14B2BB3F2F9007C77FD /* ProfileViewController.xib in Resources */,
 				11F4E1652BB410F4007C77FD /* EmailInput.xib in Resources */,
 				11F4E1212BB3E880007C77FD /* LaunchScreen.storyboard in Resources */,
+				11F4E17C2BB4A43C007C77FD /* VerificationCodeCell.xib in Resources */,
 				11F4E1422BB3ED98007C77FD /* FavouritesViewController.xib in Resources */,
 				11F4E14F2BB3F306007C77FD /* MessagesViewController.xib in Resources */,
 				11F4E12F2BB3E933007C77FD /* NavigationViewController.xib in Resources */,
@@ -301,6 +330,7 @@
 				11F4E13D2BB3ECF6007C77FD /* SearchViewController.xib in Resources */,
 				11F4E11E2BB3E880007C77FD /* Assets.xcassets in Resources */,
 				11F4E1602BB40220007C77FD /* AuthView.xib in Resources */,
+				11F4E1732BB4A162007C77FD /* VerificationCodeView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,12 +344,14 @@
 				11F4E13C2BB3ECF6007C77FD /* SearchViewController.swift in Sources */,
 				11F4E11C2BB3E874007C77FD /* EffectiveMobile_TestTask.xcdatamodeld in Sources */,
 				11F4E15E2BB40194007C77FD /* AuthView.swift in Sources */,
+				11F4E17B2BB4A43C007C77FD /* VerificationCodeCell.swift in Sources */,
 				11F4E1122BB3E874007C77FD /* AppDelegate.swift in Sources */,
 				11F4E1632BB4109E007C77FD /* EmailInput.swift in Sources */,
 				11F4E1682BB43EB9007C77FD /* AuthViewDelegate.swift in Sources */,
 				11F4E1532BB3F31A007C77FD /* ResponsesViewController.swift in Sources */,
 				11F4E14E2BB3F306007C77FD /* MessagesViewController.swift in Sources */,
 				11F4E12E2BB3E933007C77FD /* NavigationViewController.swift in Sources */,
+				11F4E1712BB4A0E7007C77FD /* VerificationCodeView.swift in Sources */,
 				11F4E1392BB3EC10007C77FD /* MenuController.swift in Sources */,
 				11F4E1412BB3ED98007C77FD /* FavouritesViewController.swift in Sources */,
 				11F4E1562BB3FE17007C77FD /* AuthManager.swift in Sources */,

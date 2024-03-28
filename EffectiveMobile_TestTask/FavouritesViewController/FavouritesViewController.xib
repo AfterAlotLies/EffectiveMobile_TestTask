@@ -11,7 +11,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FavouritesViewController" customModule="EffectiveMobile_TestTask" customModuleProvider="target">
             <connections>
                 <outlet property="authView" destination="uga-2z-FZz" id="92u-l8-THM"/>
-                <outlet property="testView" destination="9IT-YG-h7R" id="9qQ-ub-phY"/>
+                <outlet property="favouritesLabel" destination="AMz-Oh-yaz" id="u53-CR-WBc"/>
+                <outlet property="vacanciesCountLabel" destination="5Hq-dc-2Kk" id="fhI-7R-Guu"/>
+                <outlet property="vacanciesList" destination="IpC-uo-Hs9" id="J4P-Bm-LJM"/>
+                <outlet property="verificationView" destination="jNE-rQ-9HV" id="dHV-Y5-hWt"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,23 +23,61 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9IT-YG-h7R">
-                    <rect key="frame" x="8" y="226" width="377" height="399"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uga-2z-FZz" customClass="AuthView" customModule="EffectiveMobile_TestTask" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Избранное" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMz-Oh-yaz">
+                    <rect key="frame" x="16" y="75" width="361" height="27"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 Вакансий" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Hq-dc-2Kk">
+                    <rect key="frame" x="16" y="126" width="361" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jNE-rQ-9HV" customClass="VerificationCodeView" customModule="EffectiveMobile_TestTask" customModuleProvider="target">
+                    <rect key="frame" x="8" y="107" width="377" height="280"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="280" id="Pva-WX-xnr"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="IpC-uo-Hs9" userLabel="vacanciesList">
+                    <rect key="frame" x="8" y="183" width="377" height="619"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lMf-iI-XY5">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="jNE-rQ-9HV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="1iO-ub-wOK"/>
                 <constraint firstItem="uga-2z-FZz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="46e-WH-524"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uga-2z-FZz" secondAttribute="trailing" id="4JR-Ae-AGm"/>
                 <constraint firstItem="uga-2z-FZz" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="8o8-WG-MDG"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jNE-rQ-9HV" secondAttribute="trailing" constant="8" id="AA2-OU-ZYd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="IpC-uo-Hs9" secondAttribute="trailing" constant="8" id="G7f-Ew-qoH"/>
+                <constraint firstItem="AMz-Oh-yaz" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="QlD-ME-jXO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="AMz-Oh-yaz" secondAttribute="trailing" constant="16" id="bjY-86-Sg5"/>
+                <constraint firstItem="5Hq-dc-2Kk" firstAttribute="top" secondItem="AMz-Oh-yaz" secondAttribute="bottom" constant="24" id="bqp-e0-vuc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="jNE-rQ-9HV" secondAttribute="bottom" constant="16" id="c7M-MS-2G1"/>
+                <constraint firstItem="IpC-uo-Hs9" firstAttribute="top" secondItem="5Hq-dc-2Kk" secondAttribute="bottom" constant="36" id="eV6-3q-2mT"/>
+                <constraint firstItem="jNE-rQ-9HV" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="48" id="gTQ-h4-jOH"/>
                 <constraint firstItem="uga-2z-FZz" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="gff-ua-RLC"/>
+                <constraint firstItem="IpC-uo-Hs9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="hKu-Ff-Vcf"/>
+                <constraint firstItem="AMz-Oh-yaz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="hcT-Yo-cQ8"/>
+                <constraint firstItem="5Hq-dc-2Kk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="ql2-um-Xud"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="IpC-uo-Hs9" secondAttribute="bottom" constant="16" id="sPj-L1-YOJ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5Hq-dc-2Kk" secondAttribute="trailing" constant="16" id="u5i-Uo-lss"/>
             </constraints>
             <point key="canvasLocation" x="101.5267175572519" y="-11.267605633802818"/>
         </view>

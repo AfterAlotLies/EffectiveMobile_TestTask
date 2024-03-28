@@ -90,7 +90,6 @@ class EmailInput: UIView {
     private func textFieldDidChanged(_ textField: UITextField) {
         if emailInputField.text == "" {
             clearFieldButton.isHidden = true
-            
             authViewDelegate?.buttonDeactivate()
         } else {
             UIView.animate(withDuration: 0.3) {
