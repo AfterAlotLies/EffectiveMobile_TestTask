@@ -7,8 +7,10 @@
 
 import UIKit
 
+// MARK: - NavigationViewController class
 class NavigationViewController: UINavigationController {
 
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         let menuController = MenuController()

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="EffectiveMobile_TestTask" customModuleProvider="target">
+            <connections>
+                <outlet property="authView" destination="4YR-rW-N9o" id="FZc-7F-GcH"/>
+                <outlet property="verificationCodeView" destination="Iot-LK-9R9" id="2g2-jn-uMX"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iot-LK-9R9" customClass="VerificationCodeView" customModule="EffectiveMobile_TestTask" customModuleProvider="target">
+                    <rect key="frame" x="8" y="107" width="377" height="280"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="280" id="GF3-rw-XhL"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4YR-rW-N9o" customClass="AuthView" customModule="EffectiveMobile_TestTask" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="4YR-rW-N9o" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="5eQ-Rb-eep"/>
+                <constraint firstItem="Iot-LK-9R9" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="48" id="BMY-Vd-r07"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Iot-LK-9R9" secondAttribute="bottom" constant="16" id="S5g-2D-RJD"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4YR-rW-N9o" secondAttribute="trailing" id="fdw-tn-9Jb"/>
+                <constraint firstItem="Iot-LK-9R9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="lNx-NB-EnD"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Iot-LK-9R9" secondAttribute="trailing" constant="8" id="nnc-vQ-KVf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="4YR-rW-N9o" secondAttribute="bottom" id="vzl-T2-2ze"/>
+                <constraint firstItem="4YR-rW-N9o" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="xt5-7s-i7w"/>
+            </constraints>
+            <point key="canvasLocation" x="102" y="-11"/>
+        </view>
+    </objects>
+</document>

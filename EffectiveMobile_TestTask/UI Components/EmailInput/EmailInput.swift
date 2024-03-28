@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: - EmailInput class
 class EmailInput: UIView {
     
     @IBOutlet private weak var emailInputField: UITextField!
@@ -15,6 +16,7 @@ class EmailInput: UIView {
     
     weak var authViewDelegate: AuthViewDelegate?
     
+    // MARK: - Lifecycle
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureView()
@@ -25,6 +27,14 @@ class EmailInput: UIView {
         configureView()
     }
     
+    private func loadViewFromXib() -> UIView {
+        guard let view = Bundle.main.loadNibNamed("EmailInput", owner: self)?.first as? UIView else {
+            return UIView()
+        }
+        return view
+    }
+    
+    // MARK: - Public methods
     func displayInputError() {
         UIView.animate(withDuration: 0.3) {
             self.errorMessage.alpha = 1.0
@@ -41,13 +51,18 @@ class EmailInput: UIView {
         }
     }
     
-    private func loadViewFromXib() -> UIView {
-        guard let view = Bundle.main.loadNibNamed("EmailInput", owner: self)?.first as? UIView else {
-            return UIView()
+    // MARK: - IBAction
+    @IBAction func clearInputField(_ sender: Any) {
+        emailInputField.text = ""
+        UIView.animate(withDuration: 0.3) {
+            self.errorMessage.alpha = 0
+            self.emailInputField.layer.borderColor = UIColor.clear.cgColor
         }
-        return view
+        clearFieldButton.isHidden = true
+        authViewDelegate?.buttonDeactivate()
     }
     
+    // MARK: - Private methods
     private func configureView() {
         let subview = self.loadViewFromXib()
         subview.frame = self.bounds
@@ -57,8 +72,7 @@ class EmailInput: UIView {
     }
     
     private func setupEmailInputField() {
-        emailInputField.attributedPlaceholder = NSAttributedString(string: "Электронная почта или телефон",
-                                                                   attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+        emailInputField.attributedPlaceholder = NSAttributedString(string: "Электронная почта или телефон", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
         clearFieldButton.isHidden = true
         emailInputField.addTarget(self, action: #selector(textFieldDidChanged(_:)), for: .editingChanged)
         emailInputField.layer.borderWidth = 1
@@ -100,15 +114,5 @@ class EmailInput: UIView {
             emailInputField.leftViewMode = .unlessEditing
             authViewDelegate?.buttonActivate()
         }
-    }
-
-    @IBAction func clearInputField(_ sender: Any) {
-        emailInputField.text = ""
-        UIView.animate(withDuration: 0.3) {
-            self.errorMessage.alpha = 0
-            self.emailInputField.layer.borderColor = UIColor.clear.cgColor
-        }
-        clearFieldButton.isHidden = true
-        authViewDelegate?.buttonDeactivate()
     }
 }

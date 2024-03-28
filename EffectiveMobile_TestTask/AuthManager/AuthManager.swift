@@ -7,6 +7,7 @@
 
 import Foundation
 
+// MARK: - AuthManager class
 class AuthManager {
     
     static let shared = AuthManager()

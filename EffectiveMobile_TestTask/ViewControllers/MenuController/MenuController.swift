@@ -7,16 +7,19 @@
 
 import UIKit
 
+// MARK: - MenuController class
 class MenuController: UITabBarController {
     
     private let authManager = AuthManager.shared
     
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupMenuBar()
         setupTopBorder()
     }
     
+    // MARK: - Setup Methods
     private func setupMenuBar() {
         let searchController = SearchViewController()
         let favouritesController = FavouritesViewController()

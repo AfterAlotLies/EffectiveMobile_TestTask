@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="EffectiveMobile_TestTask" customModuleProvider="target">
+            <connections>
+                <outlet property="authView" destination="E80-Pd-PoI" id="726-Sb-vOR"/>
+                <outlet property="verificationCodeView" destination="ix1-tK-zrk" id="3WB-m4-GYL"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ix1-tK-zrk" customClass="VerificationCodeView" customModule="EffectiveMobile_TestTask" customModuleProvider="target">
+                    <rect key="frame" x="8" y="107" width="377" height="280"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="280" id="Asb-OK-52U"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E80-Pd-PoI" customClass="AuthView" customModule="EffectiveMobile_TestTask" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="ix1-tK-zrk" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="48" id="0ld-GR-WaD"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ix1-tK-zrk" secondAttribute="trailing" constant="8" id="UPe-79-CGL"/>
+                <constraint firstItem="ix1-tK-zrk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="eIe-XV-I0Z"/>
+                <constraint firstItem="E80-Pd-PoI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="fjy-iu-AXo"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="E80-Pd-PoI" secondAttribute="trailing" id="gad-PI-qyc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ix1-tK-zrk" secondAttribute="bottom" constant="16" id="ljb-u7-4U2"/>
+                <constraint firstItem="E80-Pd-PoI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="tjL-cB-BOm"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="E80-Pd-PoI" secondAttribute="bottom" id="u6h-f1-t6P"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="-11"/>
+        </view>
+    </objects>
+</document>

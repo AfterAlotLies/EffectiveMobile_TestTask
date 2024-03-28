@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MessagesViewController" customModule="EffectiveMobile_TestTask" customModuleProvider="target">
+            <connections>
+                <outlet property="authView" destination="DDr-LQ-xA1" id="vpt-LV-pUD"/>
+                <outlet property="verificationCodeView" destination="FWJ-at-aNW" id="izN-Vd-cWc"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FWJ-at-aNW" customClass="VerificationCodeView" customModule="EffectiveMobile_TestTask" customModuleProvider="target">
+                    <rect key="frame" x="8" y="107" width="377" height="280"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="280" id="gRQ-nH-ZYn"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DDr-LQ-xA1" customClass="AuthView" customModule="EffectiveMobile_TestTask" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="FWJ-at-aNW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="Jv1-rL-vEH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="DDr-LQ-xA1" secondAttribute="bottom" id="Ket-hD-WxE"/>
+                <constraint firstItem="DDr-LQ-xA1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="gQC-d6-665"/>
+                <constraint firstItem="FWJ-at-aNW" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="48" id="jaP-WX-wdz"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="DDr-LQ-xA1" secondAttribute="trailing" id="led-Lf-ZxE"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="FWJ-at-aNW" secondAttribute="bottom" constant="16" id="n1a-02-sKO"/>
+                <constraint firstItem="DDr-LQ-xA1" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="sbx-xD-oIq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="FWJ-at-aNW" secondAttribute="trailing" constant="8" id="uT2-U9-Dxm"/>
+            </constraints>
+            <point key="canvasLocation" x="102" y="-11"/>
+        </view>
+    </objects>
+</document>

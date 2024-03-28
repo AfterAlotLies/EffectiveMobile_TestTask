@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: - FavouritesViewController class
 class FavouritesViewController: UIViewController {
 
     @IBOutlet private weak var authView: AuthView!
@@ -17,52 +18,64 @@ class FavouritesViewController: UIViewController {
     
     private let authManager = AuthManager.shared
     
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         authView.makeContinueButtonDisabled()
-        hideFavouritesView()
-        verificationView.alpha = 0
-        verificationView.isHidden = true
+        setupVerificationView()
+        showViewByStatus(status: .hide)
         actionHandlers()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         isLoggedIn()
     }
     
+    // MARK: - Private methods
     private func actionHandlers() {
         authView.setActionHandler {
             self.authView.isHidden = true
             UIView.animate(withDuration: 0.3) {
                 self.verificationView.isHidden = false
                 self.verificationView.alpha = 1
+                self.tabBarController?.tabBar.isUserInteractionEnabled = false
             }
         }
         
         verificationView.setConfirmActionHandler {
             self.verificationView.isHidden = true
-            self.showFavouritesView()
+            self.showViewByStatus(status: .show)
             self.authManager.login()
+            self.tabBarController?.tabBar.isUserInteractionEnabled = true
         }
+    }
+    
+    private func setupVerificationView() {
+        verificationView.alpha = 0
+        verificationView.isHidden = true
     }
     
     private func isLoggedIn() {
         if let isLoggedIn = authManager.isLoggedIn {
             if isLoggedIn {
                 authView.isHidden = true
-                showFavouritesView()
+                showViewByStatus(status: .show)
             }
         }
     }
     
-    private func hideFavouritesView() {
-        favouritesLabel.isHidden = true
-        vacanciesList.isHidden = true
-        vacanciesCountLabel.isHidden = true
-    }
-    
-    private func showFavouritesView() {
-        favouritesLabel.isHidden = false
-        vacanciesList.isHidden = false
-        vacanciesCountLabel.isHidden = false
+    private func showViewByStatus(status: ViewVisibilityStatus) {
+        switch status {
+        case .hide:
+            favouritesLabel.isHidden = true
+            vacanciesList.isHidden = true
+            vacanciesCountLabel.isHidden = true
+
+        case .show:
+            favouritesLabel.isHidden = false
+            vacanciesList.isHidden = false
+            vacanciesCountLabel.isHidden = false
+        }
     }
 }
-
-
