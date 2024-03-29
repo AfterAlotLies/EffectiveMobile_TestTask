@@ -10,6 +10,7 @@ import UIKit
 // MARK: - VerificationCodeView class
 class VerificationCodeView: UIView {
     
+    @IBOutlet private weak var emailLabel: UILabel!
     @IBOutlet private weak var confirmLabel: UILabel!
     @IBOutlet private weak var codeVerificationField: UICollectionView!
     @IBOutlet private weak var confirmButton: UIButton!
@@ -39,6 +40,10 @@ class VerificationCodeView: UIView {
     // MARK: - Public methods
     func setConfirmActionHandler(_ actionHandler: (() -> Void)?) {
         confirmActionHandler = actionHandler
+    }
+    
+    func setEmailToLabel(emailAddress: String) {
+        emailLabel.text = "Отправили код на \(emailAddress)"
     }
     
     // MARK: - IBAction

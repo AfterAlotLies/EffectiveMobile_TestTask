@@ -16,6 +16,8 @@ class AuthView: UIView {
     private var inputResult: String = ""
     private var continueActionHandler: (() -> Void)?
     
+    weak var authDelegate: AuthViewDelegate?
+    
     // MARK: - Lifecycle
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -40,7 +42,7 @@ class AuthView: UIView {
         continueButton.alpha = 0.5
     }
     
-    func setActionHandler(_ actionHandler: (() -> Void)?) {
+    func setContinueActionHandler(_ actionHandler: (() -> Void)?) {
         continueActionHandler = actionHandler
     }
     
@@ -51,6 +53,7 @@ class AuthView: UIView {
             emailInputField.displayInputError()
         } else {
             continueActionHandler?()
+            authDelegate?.setUserEmail(emailAddress: inputResult)
         }
     }
     

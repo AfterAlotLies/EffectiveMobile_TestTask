@@ -11,4 +11,20 @@ import Foundation
 protocol AuthViewDelegate: AnyObject {
     func buttonActivate()
     func buttonDeactivate()
+    func setUserEmail(emailAddress: String)
+}
+
+extension AuthViewDelegate {
+    
+    func buttonActivate() {
+        
+    }
+    
+    func buttonDeactivate() {
+        
+    }
+    
+    func setUserEmail(emailAddress: String) {
+        
+    }
 }

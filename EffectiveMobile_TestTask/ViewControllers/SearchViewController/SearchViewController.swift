@@ -10,7 +10,7 @@ import UIKit
 // MARK: - SearchViewController class
 class SearchViewController: UIViewController {
     
-    @IBOutlet private weak var verificationCodeView: VerificationCodeView!
+    @IBOutlet private weak var verificationView: VerificationCodeView!
     @IBOutlet private weak var authView: AuthView!
     
     private let authManager = AuthManager.shared
@@ -21,37 +21,45 @@ class SearchViewController: UIViewController {
         authView.makeContinueButtonDisabled()
         actionHandlers()
         setupVerificationView()
+        authView.authDelegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         isLoggedIn()
     }
+}
+
+// MARK: - SearchViewController + AuthViewDelegate
+extension SearchViewController: AuthViewDelegate {
     
-    private func actionHandlers() {
-        authView.setActionHandler {
+    func setUserEmail(emailAddress: String) {
+        verificationView.setEmailToLabel(emailAddress: emailAddress)
+    }
+}
+
+// MARK: - SearchViewController + ViewVisibilityDelegate
+extension SearchViewController: ViewVisibilityDelegate {
+    
+    func actionHandlers() {
+        authView.setContinueActionHandler {
             self.authView.isHidden = true
             UIView.animate(withDuration: 0.3) {
-                self.verificationCodeView.isHidden = false
-                self.verificationCodeView.alpha = 1
+                self.verificationView.isHidden = false
+                self.verificationView.alpha = 1
                 self.tabBarController?.tabBar.isUserInteractionEnabled = false
             }
         }
         
-        verificationCodeView.setConfirmActionHandler {
-            self.verificationCodeView.isHidden = true
+        verificationView.setConfirmActionHandler {
+            self.verificationView.isHidden = true
             self.showViewByStatus(status: .show)
             self.authManager.login()
             self.tabBarController?.tabBar.isUserInteractionEnabled = true
         }
     }
     
-    private func setupVerificationView() {
-        verificationCodeView.alpha = 0
-        verificationCodeView.isHidden = true
-    }
-    
-    private func isLoggedIn() {
+    func isLoggedIn() {
         if let isLoggedIn = authManager.isLoggedIn {
             if isLoggedIn {
                 authView.isHidden = true
@@ -60,13 +68,18 @@ class SearchViewController: UIViewController {
         }
     }
     
-    private func showViewByStatus(status: ViewVisibilityStatus) {
+    func setupVerificationView() {
+        verificationView.alpha = 0
+        verificationView.isHidden = true
+    }
+    
+    func showViewByStatus(status: ViewVisibilityStatus) {
         switch status {
         case .hide:
-            print("smth")
+            print("")
 
         case .show:
-            print("smth")
+            print("")
         }
     }
 }

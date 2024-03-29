@@ -12,6 +12,7 @@
                 <outlet property="codeVerificationField" destination="6Pe-Tg-D96" id="Y42-zT-R5S"/>
                 <outlet property="confirmButton" destination="KXK-th-bgJ" id="zcU-pS-yao"/>
                 <outlet property="confirmLabel" destination="czs-GL-qJp" id="D3T-60-VMs"/>
+                <outlet property="emailLabel" destination="9Ob-3N-N4d" id="WNh-J5-gXR"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -19,7 +20,7 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="287"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Отправили код на " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ob-3N-N4d">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Отправили код на " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ob-3N-N4d">
                     <rect key="frame" x="16" y="26" width="361" height="23"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

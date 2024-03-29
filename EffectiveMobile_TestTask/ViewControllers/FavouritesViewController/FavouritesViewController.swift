@@ -9,7 +9,7 @@ import UIKit
 
 // MARK: - FavouritesViewController class
 class FavouritesViewController: UIViewController {
-
+    
     @IBOutlet private weak var authView: AuthView!
     @IBOutlet private weak var favouritesLabel: UILabel!
     @IBOutlet private weak var vacanciesCountLabel: UILabel!
@@ -25,16 +25,28 @@ class FavouritesViewController: UIViewController {
         setupVerificationView()
         showViewByStatus(status: .hide)
         actionHandlers()
+        authView.authDelegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         isLoggedIn()
     }
+}
+
+// MARK: - FavouritesViewController + AuthViewDelegate
+extension FavouritesViewController: AuthViewDelegate {
     
-    // MARK: - Private methods
-    private func actionHandlers() {
-        authView.setActionHandler {
+    func setUserEmail(emailAddress: String) {
+        verificationView.setEmailToLabel(emailAddress: emailAddress)
+    }
+}
+
+// MARK: - FavouritesViewController + ViewVisibilityDelegate
+extension FavouritesViewController: ViewVisibilityDelegate {
+    
+    func actionHandlers() {
+        authView.setContinueActionHandler {
             self.authView.isHidden = true
             UIView.animate(withDuration: 0.3) {
                 self.verificationView.isHidden = false
@@ -51,12 +63,7 @@ class FavouritesViewController: UIViewController {
         }
     }
     
-    private func setupVerificationView() {
-        verificationView.alpha = 0
-        verificationView.isHidden = true
-    }
-    
-    private func isLoggedIn() {
+    func isLoggedIn() {
         if let isLoggedIn = authManager.isLoggedIn {
             if isLoggedIn {
                 authView.isHidden = true
@@ -65,13 +72,18 @@ class FavouritesViewController: UIViewController {
         }
     }
     
-    private func showViewByStatus(status: ViewVisibilityStatus) {
+    func setupVerificationView() {
+        verificationView.alpha = 0
+        verificationView.isHidden = true
+    }
+    
+    func showViewByStatus(status: ViewVisibilityStatus) {
         switch status {
         case .hide:
             favouritesLabel.isHidden = true
             vacanciesList.isHidden = true
             vacanciesCountLabel.isHidden = true
-
+            
         case .show:
             favouritesLabel.isHidden = false
             vacanciesList.isHidden = false

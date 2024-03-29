@@ -10,7 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="EffectiveMobile_TestTask" customModuleProvider="target">
             <connections>
                 <outlet property="authView" destination="E80-Pd-PoI" id="726-Sb-vOR"/>
-                <outlet property="verificationCodeView" destination="ix1-tK-zrk" id="3WB-m4-GYL"/>
+                <outlet property="verificationView" destination="ix1-tK-zrk" id="3WB-m4-GYL"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
