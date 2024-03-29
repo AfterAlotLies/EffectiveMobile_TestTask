@@ -37,6 +37,7 @@
 		11F4E17C2BB4A43C007C77FD /* VerificationCodeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11F4E17A2BB4A43C007C77FD /* VerificationCodeCell.xib */; };
 		11F4E17F2BB59395007C77FD /* VerificationCodeViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F4E17E2BB59395007C77FD /* VerificationCodeViewDelegate.swift */; };
 		11F4E1832BB5BC71007C77FD /* ViewVisibilityStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F4E1822BB5BC71007C77FD /* ViewVisibilityStatus.swift */; };
+		11F4E1852BB6C30F007C77FD /* ViewVisibilityDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F4E1842BB6C30F007C77FD /* ViewVisibilityDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		11F4E17A2BB4A43C007C77FD /* VerificationCodeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VerificationCodeCell.xib; sourceTree = "<group>"; };
 		11F4E17E2BB59395007C77FD /* VerificationCodeViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationCodeViewDelegate.swift; sourceTree = "<group>"; };
 		11F4E1822BB5BC71007C77FD /* ViewVisibilityStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewVisibilityStatus.swift; sourceTree = "<group>"; };
+		11F4E1842BB6C30F007C77FD /* ViewVisibilityDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewVisibilityDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +230,7 @@
 			children = (
 				11F4E1672BB43EB9007C77FD /* AuthViewDelegate.swift */,
 				11F4E17E2BB59395007C77FD /* VerificationCodeViewDelegate.swift */,
+				11F4E1842BB6C30F007C77FD /* ViewVisibilityDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 				11F4E14E2BB3F306007C77FD /* MessagesViewController.swift in Sources */,
 				11F4E12E2BB3E933007C77FD /* NavigationViewController.swift in Sources */,
 				11F4E1712BB4A0E7007C77FD /* VerificationCodeView.swift in Sources */,
+				11F4E1852BB6C30F007C77FD /* ViewVisibilityDelegate.swift in Sources */,
 				11F4E1392BB3EC10007C77FD /* MenuController.swift in Sources */,
 				11F4E1412BB3ED98007C77FD /* FavouritesViewController.swift in Sources */,
 				11F4E1562BB3FE17007C77FD /* AuthManager.swift in Sources */,
