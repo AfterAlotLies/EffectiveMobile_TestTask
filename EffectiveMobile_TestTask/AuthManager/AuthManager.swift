@@ -18,6 +18,5 @@ class AuthManager {
     
     func login() {
         UserDefaults.standard.setValue(true, forKey: "isLoggedIn")
-        print("u logged in ")
     }
 }
