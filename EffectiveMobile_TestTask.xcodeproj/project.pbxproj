@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		118C76382BB959A0006C1311 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 118C76372BB959A0006C1311 /* data.json */; };
+		118C763C2BB95C87006C1311 /* RecommendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118C763B2BB95C87006C1311 /* RecommendModel.swift */; };
+		118C763F2BB95E9C006C1311 /* DataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118C763E2BB95E9C006C1311 /* DataParser.swift */; };
+		118C76442BB979DE006C1311 /* VacanciesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118C76432BB979DE006C1311 /* VacanciesModel.swift */; };
 		11F4E1122BB3E874007C77FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F4E1112BB3E874007C77FD /* AppDelegate.swift */; };
 		11F4E1142BB3E874007C77FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F4E1132BB3E874007C77FD /* SceneDelegate.swift */; };
 		11F4E11C2BB3E874007C77FD /* EffectiveMobile_TestTask.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 11F4E11A2BB3E874007C77FD /* EffectiveMobile_TestTask.xcdatamodeld */; };
@@ -38,9 +42,19 @@
 		11F4E17F2BB59395007C77FD /* VerificationCodeViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F4E17E2BB59395007C77FD /* VerificationCodeViewDelegate.swift */; };
 		11F4E1832BB5BC71007C77FD /* ViewVisibilityStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F4E1822BB5BC71007C77FD /* ViewVisibilityStatus.swift */; };
 		11F4E1852BB6C30F007C77FD /* ViewVisibilityDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F4E1842BB6C30F007C77FD /* ViewVisibilityDelegate.swift */; };
+		11F4E1882BB6D79A007C77FD /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F4E1872BB6D79A007C77FD /* SearchView.swift */; };
+		11F4E18A2BB6D7AD007C77FD /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11F4E1892BB6D7AD007C77FD /* SearchView.xib */; };
+		11F4E18D2BB6DD5A007C77FD /* RecommendationViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F4E18B2BB6DD5A007C77FD /* RecommendationViewCell.swift */; };
+		11F4E18E2BB6DD5A007C77FD /* RecommendationViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11F4E18C2BB6DD5A007C77FD /* RecommendationViewCell.xib */; };
+		11F4E1912BB75DCA007C77FD /* VacanciesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F4E18F2BB75DCA007C77FD /* VacanciesCollectionViewCell.swift */; };
+		11F4E1922BB75DCA007C77FD /* VacanciesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11F4E1902BB75DCA007C77FD /* VacanciesCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		118C76372BB959A0006C1311 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = SOURCE_ROOT; };
+		118C763B2BB95C87006C1311 /* RecommendModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendModel.swift; sourceTree = "<group>"; };
+		118C763E2BB95E9C006C1311 /* DataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataParser.swift; sourceTree = "<group>"; };
+		118C76432BB979DE006C1311 /* VacanciesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacanciesModel.swift; sourceTree = "<group>"; };
 		11F4E10E2BB3E874007C77FD /* EffectiveMobile_TestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EffectiveMobile_TestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F4E1112BB3E874007C77FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11F4E1132BB3E874007C77FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +88,12 @@
 		11F4E17E2BB59395007C77FD /* VerificationCodeViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationCodeViewDelegate.swift; sourceTree = "<group>"; };
 		11F4E1822BB5BC71007C77FD /* ViewVisibilityStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewVisibilityStatus.swift; sourceTree = "<group>"; };
 		11F4E1842BB6C30F007C77FD /* ViewVisibilityDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewVisibilityDelegate.swift; sourceTree = "<group>"; };
+		11F4E1872BB6D79A007C77FD /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		11F4E1892BB6D7AD007C77FD /* SearchView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchView.xib; sourceTree = "<group>"; };
+		11F4E18B2BB6DD5A007C77FD /* RecommendationViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationViewCell.swift; sourceTree = "<group>"; };
+		11F4E18C2BB6DD5A007C77FD /* RecommendationViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendationViewCell.xib; sourceTree = "<group>"; };
+		11F4E18F2BB75DCA007C77FD /* VacanciesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacanciesCollectionViewCell.swift; sourceTree = "<group>"; };
+		11F4E1902BB75DCA007C77FD /* VacanciesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VacanciesCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +107,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		118C76392BB959E5006C1311 /* RecommendationCell */ = {
+			isa = PBXGroup;
+			children = (
+				11F4E18B2BB6DD5A007C77FD /* RecommendationViewCell.swift */,
+				11F4E18C2BB6DD5A007C77FD /* RecommendationViewCell.xib */,
+			);
+			path = RecommendationCell;
+			sourceTree = "<group>";
+		};
+		118C763A2BB95C70006C1311 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				118C76422BB979D0006C1311 /* Vacancies */,
+				118C76412BB979C2006C1311 /* Recommendations */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		118C763D2BB95E87006C1311 /* DataParser */ = {
+			isa = PBXGroup;
+			children = (
+				118C763E2BB95E9C006C1311 /* DataParser.swift */,
+			);
+			path = DataParser;
+			sourceTree = "<group>";
+		};
+		118C76402BB96A29006C1311 /* VacanciesViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				11F4E18F2BB75DCA007C77FD /* VacanciesCollectionViewCell.swift */,
+				11F4E1902BB75DCA007C77FD /* VacanciesCollectionViewCell.xib */,
+			);
+			path = VacanciesViewCell;
+			sourceTree = "<group>";
+		};
+		118C76412BB979C2006C1311 /* Recommendations */ = {
+			isa = PBXGroup;
+			children = (
+				118C763B2BB95C87006C1311 /* RecommendModel.swift */,
+			);
+			path = Recommendations;
+			sourceTree = "<group>";
+		};
+		118C76422BB979D0006C1311 /* Vacancies */ = {
+			isa = PBXGroup;
+			children = (
+				118C76432BB979DE006C1311 /* VacanciesModel.swift */,
+			);
+			path = Vacancies;
+			sourceTree = "<group>";
+		};
 		11F4E1052BB3E874007C77FD = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +177,8 @@
 		11F4E1102BB3E874007C77FD /* EffectiveMobile_TestTask */ = {
 			isa = PBXGroup;
 			children = (
+				118C763D2BB95E87006C1311 /* DataParser */,
+				118C763A2BB95C70006C1311 /* Models */,
 				11F4E1692BB45888007C77FD /* UI Components */,
 				11F4E17D2BB5908E007C77FD /* ViewControllers */,
 				11F4E1662BB43EA7007C77FD /* Protocols */,
@@ -146,6 +219,7 @@
 		11F4E1362BB3E9F7007C77FD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				118C76372BB959A0006C1311 /* data.json */,
 				11F4E11D2BB3E880007C77FD /* Assets.xcassets */,
 				11F4E11F2BB3E880007C77FD /* LaunchScreen.storyboard */,
 				11F4E1222BB3E880007C77FD /* Info.plist */,
@@ -238,6 +312,9 @@
 		11F4E1692BB45888007C77FD /* UI Components */ = {
 			isa = PBXGroup;
 			children = (
+				118C76402BB96A29006C1311 /* VacanciesViewCell */,
+				118C76392BB959E5006C1311 /* RecommendationCell */,
+				11F4E1862BB6D785007C77FD /* SearchView */,
 				11F4E1742BB4A3D6007C77FD /* VerificationCodeCell */,
 				11F4E16F2BB4A0AC007C77FD /* VerificationCodeView */,
 				11F4E1582BB4016D007C77FD /* AuthView */,
@@ -276,6 +353,15 @@
 				11F4E1472BB3EFA3007C77FD /* ProfileViewController */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		11F4E1862BB6D785007C77FD /* SearchView */ = {
+			isa = PBXGroup;
+			children = (
+				11F4E1872BB6D79A007C77FD /* SearchView.swift */,
+				11F4E1892BB6D7AD007C77FD /* SearchView.xib */,
+			);
+			path = SearchView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,13 +427,17 @@
 				11F4E1212BB3E880007C77FD /* LaunchScreen.storyboard in Resources */,
 				11F4E17C2BB4A43C007C77FD /* VerificationCodeCell.xib in Resources */,
 				11F4E1422BB3ED98007C77FD /* FavouritesViewController.xib in Resources */,
+				11F4E18A2BB6D7AD007C77FD /* SearchView.xib in Resources */,
 				11F4E14F2BB3F306007C77FD /* MessagesViewController.xib in Resources */,
+				118C76382BB959A0006C1311 /* data.json in Resources */,
 				11F4E12F2BB3E933007C77FD /* NavigationViewController.xib in Resources */,
 				11F4E1542BB3F31A007C77FD /* ResponsesViewController.xib in Resources */,
 				11F4E13D2BB3ECF6007C77FD /* SearchViewController.xib in Resources */,
 				11F4E11E2BB3E880007C77FD /* Assets.xcassets in Resources */,
 				11F4E1602BB40220007C77FD /* AuthView.xib in Resources */,
+				11F4E1922BB75DCA007C77FD /* VacanciesCollectionViewCell.xib in Resources */,
 				11F4E1732BB4A162007C77FD /* VerificationCodeView.xib in Resources */,
+				11F4E18E2BB6DD5A007C77FD /* RecommendationViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,15 +448,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11F4E1882BB6D79A007C77FD /* SearchView.swift in Sources */,
+				11F4E1912BB75DCA007C77FD /* VacanciesCollectionViewCell.swift in Sources */,
+				118C763F2BB95E9C006C1311 /* DataParser.swift in Sources */,
 				11F4E13C2BB3ECF6007C77FD /* SearchViewController.swift in Sources */,
 				11F4E11C2BB3E874007C77FD /* EffectiveMobile_TestTask.xcdatamodeld in Sources */,
 				11F4E15E2BB40194007C77FD /* AuthView.swift in Sources */,
+				118C763C2BB95C87006C1311 /* RecommendModel.swift in Sources */,
 				11F4E17B2BB4A43C007C77FD /* VerificationCodeCell.swift in Sources */,
 				11F4E1122BB3E874007C77FD /* AppDelegate.swift in Sources */,
 				11F4E1632BB4109E007C77FD /* EmailInput.swift in Sources */,
 				11F4E1682BB43EB9007C77FD /* AuthViewDelegate.swift in Sources */,
 				11F4E1532BB3F31A007C77FD /* ResponsesViewController.swift in Sources */,
 				11F4E14E2BB3F306007C77FD /* MessagesViewController.swift in Sources */,
+				118C76442BB979DE006C1311 /* VacanciesModel.swift in Sources */,
 				11F4E12E2BB3E933007C77FD /* NavigationViewController.swift in Sources */,
 				11F4E1712BB4A0E7007C77FD /* VerificationCodeView.swift in Sources */,
 				11F4E1852BB6C30F007C77FD /* ViewVisibilityDelegate.swift in Sources */,
@@ -375,6 +470,7 @@
 				11F4E1562BB3FE17007C77FD /* AuthManager.swift in Sources */,
 				11F4E14A2BB3F2F9007C77FD /* ProfileViewController.swift in Sources */,
 				11F4E1142BB3E874007C77FD /* SceneDelegate.swift in Sources */,
+				11F4E18D2BB6DD5A007C77FD /* RecommendationViewCell.swift in Sources */,
 				11F4E1832BB5BC71007C77FD /* ViewVisibilityStatus.swift in Sources */,
 				11F4E17F2BB59395007C77FD /* VerificationCodeViewDelegate.swift in Sources */,
 			);
