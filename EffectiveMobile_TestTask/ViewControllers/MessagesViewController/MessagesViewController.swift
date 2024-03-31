@@ -18,13 +18,13 @@ class MessagesViewController: UIViewController {
         super.viewDidLoad()
         authView.makeContinueButtonDisabled()
         actionHandlers()
-        setupVerificationView()
+        checkRegistrationState()
         authView.authDelegate = self
+        NotificationCenter.default.addObserver(self, selector: #selector(userRegistered), name: Notification.Name("UserRegisteredNotification"), object: nil)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        isLoggedIn()
+    @objc func userRegistered() {
+        checkRegistrationState()
     }
 }
 
@@ -38,6 +38,16 @@ extension MessagesViewController: AuthViewDelegate {
 
 // MARK: - MessagesViewController + ViewVisibilityDelegate
 extension MessagesViewController: ViewVisibilityDelegate {
+    
+    func checkRegistrationState() {
+        if let isLoggedIn = authManager.isLoggedIn {
+            if isLoggedIn {
+                showViewByStatus(status: .show)
+            } else {
+                showViewByStatus(status: .hide)
+            }
+        }
+    }
     
     func actionHandlers() {
         authView.setContinueActionHandler {
@@ -66,18 +76,16 @@ extension MessagesViewController: ViewVisibilityDelegate {
         }
     }
     
-    func setupVerificationView() {
-        verificationView.alpha = 0
-        verificationView.isHidden = true
-    }
-    
     func showViewByStatus(status: ViewVisibilityStatus) {
         switch status {
         case .hide:
             print("")
+            verificationView.alpha = 0
+            verificationView.isHidden = true
             
         case .show:
-            print("")
+            authView.isHidden = true
+            verificationView.isHidden = true
         }
     }
 }

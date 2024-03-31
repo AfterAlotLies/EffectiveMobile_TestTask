@@ -10,8 +10,6 @@ import UIKit
 // MARK: - MenuController class
 class MenuController: UITabBarController {
     
-    private let authManager = AuthManager.shared
-    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,14 +39,6 @@ class MenuController: UITabBarController {
         
         for item in 0...4 {
             items[item].image = UIImage(named: images[item])
-        }
-        
-        if let isLoggedIn = authManager.isLoggedIn {
-            if isLoggedIn {
-                selectedIndex = 0
-            } else {
-                selectedIndex = 1
-            }
         }
     }
     

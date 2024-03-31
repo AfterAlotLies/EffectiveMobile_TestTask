@@ -13,11 +13,8 @@ protocol ViewVisibilityDelegate: AnyObject {
     ///Method calls actonHandlers for make action by tap to buttons
     func actionHandlers()
     
-    ///Method  checks is user logged in or not
-    func isLoggedIn()
-    
-    ///Method  setups verificationview at the start of the app
-    func setupVerificationView()
+    ///Method checking is user logged in or not
+    func checkRegistrationState()
     
     ///Method  shows or hides Root view by status
     func showViewByStatus(status: ViewVisibilityStatus)

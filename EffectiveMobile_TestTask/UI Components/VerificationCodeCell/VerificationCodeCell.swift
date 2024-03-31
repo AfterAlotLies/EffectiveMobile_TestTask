@@ -31,11 +31,11 @@ class VerificationCodeCell: UICollectionViewCell {
     
     // MARK: - Private methods
     private func setupCodeInput() {
+        codeVerificationInput.keyboardType = .numberPad
         codeVerificationInput.layer.borderWidth = 1
         codeVerificationInput.layer.borderColor = UIColor.clear.cgColor
         codeVerificationInput.layer.cornerRadius = 5
         codeVerificationInput.backgroundColor = .darkGray
-        codeVerificationInput.becomeFirstResponder()
         codeVerificationInput.delegate = self
         codeVerificationInput.addTarget(self, 
                                         action: #selector(textFieldDidChange(_:)),

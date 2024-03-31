@@ -22,15 +22,16 @@ class FavouritesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         authView.makeContinueButtonDisabled()
-        setupVerificationView()
-        showViewByStatus(status: .hide)
+        checkRegistrationState()
         actionHandlers()
         authView.authDelegate = self
+        NotificationCenter.default.addObserver(self, selector: #selector(userRegistered), name: Notification.Name("UserRegisteredNotification"), object: nil)
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        isLoggedIn()
+
+    //Check user auth
+    @objc
+    private func userRegistered() {
+        checkRegistrationState()
     }
 }
 
@@ -45,8 +46,19 @@ extension FavouritesViewController: AuthViewDelegate {
 // MARK: - FavouritesViewController + ViewVisibilityDelegate
 extension FavouritesViewController: ViewVisibilityDelegate {
     
+    func checkRegistrationState() {
+        if let isLoggedIn = authManager.isLoggedIn {
+            if isLoggedIn {
+                showViewByStatus(status: .show)
+            } else {
+                showViewByStatus(status: .hide)
+            }
+        }
+    }
+    
     func actionHandlers() {
-        authView.setContinueActionHandler {
+        authView.setContinueActionHandler { [weak self] in
+            guard let self = self else { return }
             self.authView.isHidden = true
             UIView.animate(withDuration: 0.3) {
                 self.verificationView.isHidden = false
@@ -55,26 +67,12 @@ extension FavouritesViewController: ViewVisibilityDelegate {
             }
         }
         
-        verificationView.setConfirmActionHandler {
-            self.verificationView.isHidden = true
+        verificationView.setConfirmActionHandler { [weak self] in
+            guard let self = self else { return }
             self.showViewByStatus(status: .show)
             self.authManager.login()
             self.tabBarController?.tabBar.isUserInteractionEnabled = true
         }
-    }
-    
-    func isLoggedIn() {
-        if let isLoggedIn = authManager.isLoggedIn {
-            if isLoggedIn {
-                authView.isHidden = true
-                showViewByStatus(status: .show)
-            }
-        }
-    }
-    
-    func setupVerificationView() {
-        verificationView.alpha = 0
-        verificationView.isHidden = true
     }
     
     func showViewByStatus(status: ViewVisibilityStatus) {
@@ -83,11 +81,15 @@ extension FavouritesViewController: ViewVisibilityDelegate {
             favouritesLabel.isHidden = true
             vacanciesList.isHidden = true
             vacanciesCountLabel.isHidden = true
+            verificationView.alpha = 0
+            verificationView.isHidden = true
             
         case .show:
             favouritesLabel.isHidden = false
             vacanciesList.isHidden = false
             vacanciesCountLabel.isHidden = false
+            authView.isHidden = true
+            verificationView.isHidden = true
         }
     }
 }

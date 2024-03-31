@@ -18,5 +18,7 @@ class AuthManager {
     
     func login() {
         UserDefaults.standard.setValue(true, forKey: "isLoggedIn")
+        NotificationCenter.default.post(name: Notification.Name("UserRegisteredNotification"), object: nil)
+
     }
 }

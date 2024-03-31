@@ -144,7 +144,7 @@ extension VerificationCodeView: VerificationCodeViewDelegate {
     
     func deactivateConfirmButton() {
         confirmButton.isUserInteractionEnabled = false
-        UIView.animate(withDuration: 0.3) {
+        UIView.animate(withDuration: 0.3) { 
             self.confirmButton.alpha = 0.5
         }
     }
