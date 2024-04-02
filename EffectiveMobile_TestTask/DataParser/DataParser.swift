@@ -7,6 +7,7 @@
 
 import Foundation
 
+// MARK: - DataParser
 class DataParser {
     
     static let shared = DataParser()

@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: - RecommendationViewCell
 class RecommendationViewCell: UICollectionViewCell {
     
     @IBOutlet private weak var backgroundViewCell: UIView!
@@ -15,10 +16,21 @@ class RecommendationViewCell: UICollectionViewCell {
     @IBOutlet private weak var recommendUpButton: UIButton!
     
     private let darkGreyColor: UIColor = UIColor(red: 34.0 / 255.0, green: 35.0 / 255.0, blue: 37.0 / 255.0, alpha: 1)
-    
+
+    // MARK: - RecommendationCellModel
+    struct RecommendationCellModel {
+        let title: String
+    }
+
+    // MARK: - Lifecycle
     override func awakeFromNib() {
         super.awakeFromNib()
         setupBackgroundCell()
+    }
+
+    // MARK: - Public methods
+    func configure(cellModel: RecommendationCellModel) {
+        setRecommendText(text: cellModel.title)
     }
     
     func setImage(imageName: String) {
@@ -41,7 +53,8 @@ class RecommendationViewCell: UICollectionViewCell {
     func hideButton() {
         recommendUpButton.isHidden = true
     }
-    
+
+    // MARK: - Private methods
     private func setupBackgroundCell() {
         backgroundViewCell.layer.borderWidth = 1
         backgroundViewCell.layer.borderColor = UIColor.clear.cgColor

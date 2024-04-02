@@ -7,13 +7,15 @@
 
 import UIKit
 
+// MARK: - SearchView
 class SearchView: UIView {
     
     @IBOutlet private weak var searchField: UITextField!
     @IBOutlet private weak var filterButton: UIButton!
     
     private let darkGreyColor: UIColor = UIColor(red: 34.0 / 255.0, green: 35.0 / 255.0, blue: 37.0 / 255.0, alpha: 1)
-    
+
+    // MARK: - Lifecycle
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureView()
@@ -30,7 +32,8 @@ class SearchView: UIView {
         }
         return view
     }
-    
+
+    // MARK: - Private methods
     private func configureView() {
         let subview = self.loadViewFromXib()
         subview.frame = self.bounds

@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="EffectiveMobile_TestTask" customModuleProvider="target">
             <connections>
                 <outlet property="authView" destination="4YR-rW-N9o" id="FZc-7F-GcH"/>
+                <outlet property="moreVacanciesButton" destination="4a5-1B-Iab" id="Z7h-2a-NAB"/>
                 <outlet property="recommendCollection" destination="Gw1-Lu-K03" id="WDg-EU-ZRr"/>
                 <outlet property="scrollContent" destination="VYP-eU-63N" id="OlZ-kN-zkK"/>
                 <outlet property="searchView" destination="jh2-I2-dzk" id="4wP-2p-Q7D"/>
@@ -40,7 +41,7 @@
                     <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ywd-kZ-sxy" userLabel="ContentView">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="432.33333333333331"/>
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="447"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jh2-I2-dzk" customClass="SearchView" customModule="EffectiveMobile_TestTask" customModuleProvider="target">
                                     <rect key="frame" x="8" y="0.0" width="377" height="38"/>
@@ -50,13 +51,13 @@
                                     </constraints>
                                 </view>
                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Gw1-Lu-K03" userLabel="Recommend Collection">
-                                    <rect key="frame" x="8" y="54" width="377" height="128"/>
+                                    <rect key="frame" x="0.0" y="54" width="393" height="128"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="128" id="MC3-to-rPp"/>
                                     </constraints>
                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZOs-xK-2Bi">
-                                        <size key="itemSize" width="128" height="128"/>
+                                        <size key="itemSize" width="132" height="128"/>
                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -82,7 +83,10 @@
                                     </collectionViewFlowLayout>
                                 </collectionView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4a5-1B-Iab">
-                                    <rect key="frame" x="16" y="382" width="361" height="34.333333333333314"/>
+                                    <rect key="frame" x="8" y="386" width="377" height="45"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="45" id="iWe-0J-hdC"/>
+                                    </constraints>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 </button>
@@ -90,21 +94,21 @@
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="1mf-E6-CGY" firstAttribute="top" secondItem="Gw1-Lu-K03" secondAttribute="bottom" constant="16" id="0uy-7J-iMM"/>
-                                <constraint firstAttribute="trailing" secondItem="Gw1-Lu-K03" secondAttribute="trailing" constant="8" id="HxQ-s0-19M"/>
+                                <constraint firstAttribute="trailing" secondItem="Gw1-Lu-K03" secondAttribute="trailing" id="HxQ-s0-19M"/>
                                 <constraint firstItem="1mf-E6-CGY" firstAttribute="leading" secondItem="Ywd-kZ-sxy" secondAttribute="leading" constant="16" id="Oqj-0W-kMg"/>
                                 <constraint firstItem="rVc-be-q3y" firstAttribute="leading" secondItem="Ywd-kZ-sxy" secondAttribute="leading" id="Q46-zX-sz7"/>
                                 <constraint firstItem="Gw1-Lu-K03" firstAttribute="top" secondItem="jh2-I2-dzk" secondAttribute="bottom" constant="16" id="Q6g-jl-JHa"/>
                                 <constraint firstAttribute="trailing" secondItem="jh2-I2-dzk" secondAttribute="trailing" constant="8" id="QQl-Pk-ZSx"/>
                                 <constraint firstAttribute="trailing" secondItem="rVc-be-q3y" secondAttribute="trailing" id="TH8-sN-uw6"/>
-                                <constraint firstItem="4a5-1B-Iab" firstAttribute="top" secondItem="rVc-be-q3y" secondAttribute="bottom" constant="16" id="TMh-1j-F3d"/>
+                                <constraint firstItem="4a5-1B-Iab" firstAttribute="top" secondItem="rVc-be-q3y" secondAttribute="bottom" constant="20" id="TMh-1j-F3d"/>
                                 <constraint firstItem="rVc-be-q3y" firstAttribute="top" secondItem="1mf-E6-CGY" secondAttribute="bottom" constant="16" id="Zjz-Rt-Ijp"/>
-                                <constraint firstAttribute="trailing" secondItem="4a5-1B-Iab" secondAttribute="trailing" constant="16" id="e1h-VL-h7N"/>
+                                <constraint firstAttribute="trailing" secondItem="4a5-1B-Iab" secondAttribute="trailing" constant="8" id="e1h-VL-h7N"/>
                                 <constraint firstAttribute="bottom" secondItem="4a5-1B-Iab" secondAttribute="bottom" constant="16" id="eh8-5h-8AS"/>
-                                <constraint firstItem="Gw1-Lu-K03" firstAttribute="leading" secondItem="Ywd-kZ-sxy" secondAttribute="leading" constant="8" id="nyv-Fp-58v"/>
+                                <constraint firstItem="Gw1-Lu-K03" firstAttribute="leading" secondItem="Ywd-kZ-sxy" secondAttribute="leading" id="nyv-Fp-58v"/>
                                 <constraint firstItem="jh2-I2-dzk" firstAttribute="leading" secondItem="Ywd-kZ-sxy" secondAttribute="leading" constant="8" id="rRz-HK-mE2"/>
                                 <constraint firstAttribute="trailing" secondItem="1mf-E6-CGY" secondAttribute="trailing" constant="16" id="tLL-KE-WVy"/>
                                 <constraint firstItem="jh2-I2-dzk" firstAttribute="top" secondItem="Ywd-kZ-sxy" secondAttribute="top" id="tuv-YQ-S06"/>
-                                <constraint firstItem="4a5-1B-Iab" firstAttribute="leading" secondItem="Ywd-kZ-sxy" secondAttribute="leading" constant="16" id="yG4-W6-3Dw"/>
+                                <constraint firstItem="4a5-1B-Iab" firstAttribute="leading" secondItem="Ywd-kZ-sxy" secondAttribute="leading" constant="8" id="yG4-W6-3Dw"/>
                             </constraints>
                         </view>
                     </subviews>
