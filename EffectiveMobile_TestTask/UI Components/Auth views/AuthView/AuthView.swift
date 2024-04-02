@@ -64,6 +64,11 @@ class AuthView: UIView {
         subview.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.addSubview(subview)
         emailInputField.authViewDelegate = self
+        let font = UIFont(name: "SFProDisplay-Medium", size: 14)
+        let attributes = [NSAttributedString.Key.font: font]
+        let attributedQuote = NSAttributedString(string: "Продолжить", attributes: attributes as [NSAttributedString.Key : Any])
+        
+        continueButton.setAttributedTitle(attributedQuote, for: .normal)
     }
 }
 

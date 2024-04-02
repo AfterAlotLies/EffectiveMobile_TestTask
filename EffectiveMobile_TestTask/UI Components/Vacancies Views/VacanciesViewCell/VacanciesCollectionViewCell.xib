@@ -18,17 +18,20 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Сейчас просматривает " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IF6-rp-NyV">
                         <rect key="frame" x="16" y="16" width="161.66666666666666" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <color key="textColor" red="0.35463179010000001" green="0.77556547190000003" blue="0.32191223670000002" alpha="0.69682716840000003" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="textColor" red="0.40784314269999999" green="0.69019609689999994" blue="0.35294118520000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5YO-Oz-KxN">
                         <rect key="frame" x="293" y="5.6666666666666679" width="48" height="38"/>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" image="favouritesImage"/>
+                        <connections>
+                            <action selector="addVacancyToFavourites:" destination="-1" eventType="touchUpInside" id="PII-1p-r4l"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRe-wD-ytZ">
                         <rect key="frame" x="16" y="41" width="317" height="19.333333333333329"/>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -67,7 +70,7 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFL-8L-4qc">
                         <rect key="frame" x="16" y="151.33333333333334" width="327" height="53.666666666666657"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="textColor" red="0.1843137443" green="0.20784312490000001" blue="0.25098040700000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4rY-j8-Kdd">
@@ -84,7 +87,7 @@
                     </button>
                 </subviews>
             </view>
-            <color key="backgroundColor" red="0.1337474585" green="0.138584286" blue="0.14374038580000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.13333332540000001" green="0.13725490870000001" blue="0.14509806040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
                 <constraint firstItem="LRa-ua-n7l" firstAttribute="top" secondItem="aRe-wD-ytZ" secondAttribute="bottom" constant="16" id="0l3-Xg-fSZ"/>
                 <constraint firstAttribute="trailing" secondItem="Rkr-DO-5NE" secondAttribute="trailing" constant="8" id="0y6-s9-neE"/>
@@ -125,6 +128,7 @@
                 <outlet property="experienceLabel" destination="Rkr-DO-5NE" id="vr5-3s-A0Y"/>
                 <outlet property="lookingNumberLabel" destination="IF6-rp-NyV" id="Dow-xF-feo"/>
                 <outlet property="publishedDateLabel" destination="LFL-8L-4qc" id="1q5-OU-CoS"/>
+                <outlet property="shareButton" destination="4rY-j8-Kdd" id="aqb-BD-ZCF"/>
                 <outlet property="townLabel" destination="LRa-ua-n7l" id="c4P-g9-Q32"/>
                 <outlet property="vacancyNameLabel" destination="aRe-wD-ytZ" id="P7H-f1-byh"/>
             </connections>
