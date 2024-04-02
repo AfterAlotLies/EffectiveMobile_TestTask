@@ -17,6 +17,7 @@ class FavouritesViewController: UIViewController {
     @IBOutlet private weak var verificationView: VerificationCodeView!
     
     private let authManager = AuthManager.shared
+    private var vacancyModel: Vacancies? = nil
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -90,6 +91,7 @@ extension FavouritesViewController: ViewVisibilityDelegate {
             vacanciesCountLabel.isHidden = false
             authView.isHidden = true
             verificationView.isHidden = true
+            vacanciesList.backgroundColor = .clear
         }
     }
 }
