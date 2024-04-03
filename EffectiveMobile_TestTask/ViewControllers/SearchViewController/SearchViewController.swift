@@ -25,7 +25,8 @@ class SearchViewController: UIViewController {
     private let authManager = AuthManager.shared
     private var vacancyModel: Vacancies? = nil
     private var recommendModel: Offers? = nil
-    
+    var favouriteController: FavouritesViewController?
+
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -165,6 +166,11 @@ extension SearchViewController: UICollectionViewDataSource {
                                                                          company: model.company,
                                                                          experience: model.experience.previewText,
                                                                          publishedDate: formattedDate))
+            cell.addToFavoutireHandler = { [weak self] in
+                guard let self = self else { return }
+                self.favouriteController?.getFavouritesData(model: model)
+                self.favouriteController?.countOfFavouritesVacancies += 1
+            }
             return cell
         }
         

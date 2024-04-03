@@ -17,7 +17,21 @@ class FavouritesViewController: UIViewController {
     @IBOutlet private weak var verificationView: VerificationCodeView!
     
     private let authManager = AuthManager.shared
-    private var vacancyModel: Vacancies? = nil
+    var countOfFavouritesVacancies: Int = 0
+    var favouriteModel: VacanciesModel? = nil
+    
+    struct ManagerModel {
+        let lookingNumber: Int?
+        let title: String
+        let town: String
+        let company: String
+        let experience: String
+        let publishedData: String
+    }
+    
+    func getFavouritesData(model: VacanciesModel) {
+        favouriteModel = model
+    }
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -28,7 +42,13 @@ class FavouritesViewController: UIViewController {
         authView.authDelegate = self
         NotificationCenter.default.addObserver(self, selector: #selector(userRegistered), name: Notification.Name("UserRegisteredNotification"), object: nil)
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        vacanciesList.reloadData()
+        vacanciesCountLabel.text = "\(countOfFavouritesVacancies) вакансий"
+    }
+    
     //Check user auth
     @objc
     private func userRegistered() {
@@ -91,7 +111,70 @@ extension FavouritesViewController: ViewVisibilityDelegate {
             vacanciesCountLabel.isHidden = false
             authView.isHidden = true
             verificationView.isHidden = true
+            vacanciesList.register(UINib(nibName: "VacanciesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "vacanciesCell")
+            vacanciesList.dataSource = self
+            vacanciesList.delegate = self
             vacanciesList.backgroundColor = .clear
         }
+    }
+}
+
+extension FavouritesViewController: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return countOfFavouritesVacancies
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = vacanciesList.dequeueReusableCell(withReuseIdentifier: "vacanciesCell", for: indexPath) as? VacanciesCollectionViewCell
+               else {
+            return UICollectionViewCell()
+        }
+        let inputFormatter = DateFormatter()
+        inputFormatter.dateFormat = "yyyy-MM-dd"
+        let outputFormatter = DateFormatter()
+        outputFormatter.dateFormat = "d MMMM"
+        outputFormatter.locale = Locale(identifier: "ru_RU")
+        
+        if let model = favouriteModel {
+            let date = inputFormatter.date(from: model.publishedDate)
+            let formattedDate = outputFormatter.string(from: date ?? Date())
+
+            cell.configure(cellModel:
+                            VacanciesCollectionViewCell.VacancyCellModel(lookingNumber: model.lookingNumber,
+                                                                         title: model.title,
+                                                                         town: model.address.town,
+                                                                         company: model.company,
+                                                                         experience: model.experience.previewText,
+                                                                         publishedDate: formattedDate))
+        } else {
+            return cell
+        }
+
+        return cell
+    }
+}
+
+extension FavouritesViewController: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let model = favouriteModel else { return }
+        let vacancyView = VacancyViewController(nibName: "VacancyViewController", bundle: nil)
+
+        vacancyView.setModel(model: VacancyViewController.VacancyInfoModel(title: model.title,
+                                                                           company: model.company,
+                                                                           salary: model.salary.full,
+                                                                           experience: model.experience.text,
+                                                                           schedules: model.schedules,
+                                                                           lookingNumber: model.lookingNumber,
+                                                                           appliedNumber: model.appliedNumber,
+                                                                           town: model.address.town,
+                                                                           street: model.address.street,
+                                                                           house: model.address.house,
+                                                                           description: model.description,
+                                                                           responsibilities: model.responsibilities,
+                                                                           questions: model.questions))
+        
+        navigationController?.pushViewController(vacancyView, animated: true)
     }
 }

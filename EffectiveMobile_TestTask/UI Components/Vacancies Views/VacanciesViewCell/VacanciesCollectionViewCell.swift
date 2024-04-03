@@ -21,6 +21,8 @@ class VacanciesCollectionViewCell: UICollectionViewCell {
     
     private var isFavourite: Bool = false
     
+    var addToFavoutireHandler: (() -> Void)?
+    
     // MARK: - VacancyCellModel
     struct VacancyCellModel {
         let lookingNumber: Int?
@@ -52,6 +54,7 @@ class VacanciesCollectionViewCell: UICollectionViewCell {
         if !isFavourite {
             addToFavourites.setImage(UIImage(named: "favouriteActiveImage"), for: .normal)
             isFavourite = true
+            addToFavoutireHandler?()
         } else {
             addToFavourites.setImage(UIImage(named: "favouritesImage"), for: .normal)
             isFavourite = false

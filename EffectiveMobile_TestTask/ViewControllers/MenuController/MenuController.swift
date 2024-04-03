@@ -25,6 +25,8 @@ class MenuController: UITabBarController {
         let messagesController = MessagesViewController()
         let profileController = ProfileViewController()
         
+        searchController.favouriteController = favouritesController
+        
         searchController.title = "Поиск"
         favouritesController.title = "Избранное"
         responsesController.title = "Отклики"
