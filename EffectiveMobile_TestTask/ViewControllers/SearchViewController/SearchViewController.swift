@@ -165,7 +165,8 @@ extension SearchViewController: UICollectionViewDataSource {
                                                                          town: model.address.town,
                                                                          company: model.company,
                                                                          experience: model.experience.previewText,
-                                                                         publishedDate: formattedDate))
+                                                                         publishedDate: formattedDate,
+                                                                        isFavourite: false))
             cell.addToFavoutireHandler = { [weak self] in
                 guard let self = self else { return }
                 self.favouriteController?.getFavouritesData(model: model)

@@ -31,6 +31,7 @@ class VacanciesCollectionViewCell: UICollectionViewCell {
         let company: String
         let experience: String
         let publishedDate: String
+        let isFavourite: Bool
     }
     
     // MARK: - Lifecycle
@@ -47,6 +48,11 @@ class VacanciesCollectionViewCell: UICollectionViewCell {
         fillCompanyLabel(companyName: cellModel.company)
         fillExperienceLabel(experience: cellModel.experience)
         fillPublishedDateLabel(publishedDate: cellModel.publishedDate)
+        if cellModel.isFavourite {
+            addToFavourites.setImage(UIImage(named: "favouriteActiveImage"), for: .normal)
+        } else {
+            addToFavourites.setImage(UIImage(named: "favouritesImage"), for: .normal)
+        }
     }
 
     // MARK: - IBAaction

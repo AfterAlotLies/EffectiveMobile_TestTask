@@ -27,6 +27,7 @@ class FavouritesViewController: UIViewController {
         let company: String
         let experience: String
         let publishedData: String
+        let isFavourite: Bool
     }
     
     func getFavouritesData(model: VacanciesModel) {
@@ -146,7 +147,8 @@ extension FavouritesViewController: UICollectionViewDataSource {
                                                                          town: model.address.town,
                                                                          company: model.company,
                                                                          experience: model.experience.previewText,
-                                                                         publishedDate: formattedDate))
+                                                                         publishedDate: formattedDate,
+                                                                        isFavourite: true))
         } else {
             return cell
         }
